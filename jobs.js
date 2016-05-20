@@ -8,7 +8,7 @@ var fs = require('fs')
 // cron job runs every 30 secs
 new CronJob('*/30 * * * * *', function() {
   // fetch the saved searchName
-  fetchSavedSearch(renderResults, 'sdk_good_bookings')
+  fetchSavedSearch(renderResults, 'sdk_status_codes')
 }, function() {}, true)
 
 // define the splunk service
@@ -39,14 +39,14 @@ function fetchSavedSearch(callback, searchName) {
       owner: "admin",
       app: "destinations"
   });
-  mySavedSearches.fetch(function (err, savedSearches) {
+  savedSearches.fetch(function (err, savedSearches) {
     if (err) {
       console.log(err)
       callback('error', searchName)
     } else {
-      if (mySavedSearches.item(searchName) != null) {
-        var mySavedSearch = mySavedSearches.item(searchName)
-        mySavedSearch.dispatch({
+      if (savedSearches.item(searchName) != null) {
+        var savedSearch = savedSearches.item(searchName)
+        savedSearch.dispatch({
             force_dispatch: false,
           }, function(e, job) {
           if (e) {
