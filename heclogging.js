@@ -3,7 +3,7 @@ var bunyan = require("bunyan");
 
 var config = {
   token: "13EA3875-2879-4F44-AF0A-3ED336CB5BCA",
-  url: "https://localhost:8088"
+  url: "http://localhost:8088"
 };
 var splunkStream = splunkBunyan.createStream(config);
 
