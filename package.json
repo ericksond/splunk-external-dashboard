@@ -1,0 +1,27 @@
+{
+  "name": "splunk-external-dashboard",
+  "version": "1.0.0",
+  "description": "Splunk Essentials 2nd Edition External Dashboard Lab",
+  "main": "jobs.js",
+  "dependencies": {
+    "bunyan": "^1.8.1",
+    "cron": "^1.1.0",
+    "splunk-bunyan-logger": "^0.9.1",
+    "splunk-logging": "^0.9.1",
+    "splunk-sdk": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericksond/splunk-external-dashboard.git"
+  },
+  "author": "Erickson Delgado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericksond/splunk-external-dashboard/issues"
+  },
+  "homepage": "https://github.com/ericksond/splunk-external-dashboard#readme"
+}
